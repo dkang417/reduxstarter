@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 
+// class based component for tracking state 
 class SearchBar extends Component {
-    // need to render and return jsx
+    //  need to render and return jsx
 
     constructor(props) {
         super(props);
@@ -11,7 +12,9 @@ class SearchBar extends Component {
     render() {
         return (
             <div>
-                <input onChange={event => this.setState({ term: event.target.value })} />
+                <input
+                    value = {this.state.term}    
+                    onChange={event => this.setState({ term: event.target.value })} />
                 {/* Value of the input: {this.state.term} */}
             </div>
         );
